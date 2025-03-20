@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grid</title>
+</head>
+<body>
+    <div class="conteyner">
+        <div id="smil"> <p> hi😀</p></div>
+        <div id="kosm"> <p>Hi 👩‍🎓</p></div>
+        <div id="kitap"><p> HI💖</p></div>
+    </div>
+    <style>
+        #kitap{
+            grid-row: span2;
+        }
+        p{text-align: center;}
+        .conteyner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 30px;
+            border: 20px solid greenyellow;
+            gap: 30px;
+            height: 200px;
+            width: 300px;
+            background-color: red;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;}
+        #kosm,#smil,#kitap{background-color: blue;
+        grid-row: span 0;}
+        #kitap{
+            grid-row: span 200px;
+            grid-column: span 1;
+        }
+
+    </style>
+</body>
+</html>

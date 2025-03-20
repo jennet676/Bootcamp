@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+</head>
+<body>
+    <style>
+        .dasky{
+            border: 10px solid rgb(86, 86, 235);
+            
+        }
+        .rew{
+            display: grid;
+            grid-template-rows: 300px 100px 300px;
+            grid-template-columns: 6fr  4fr 2fr;
+            gap: 12px;
+            background-color:rgb(6, 25, 83);
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        
+        .wer{
+            text-align: center;
+            background-color: yellow;
+        }
+    </style>
+    <div class="dasky">
+        <div class="rew">
+            <div class="wer"> <h1> childs</h1></div>
+            <div class="rew"></div>
+            <div class="wer"></div>
+            <div class="wer"></div>
+            <div class="wer"></div>
+            <div class="wer"></div>
+        </div>
+    </div>    
+
+</body>
+</html>

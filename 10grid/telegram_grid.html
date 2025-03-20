@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My beautiful </title>
+</head>
+<body> 
+    <div class="container">
+        <div class="gyzyl"><p>1</p></div>
+        <div id="cal1"><p>2</p></div>
+        <div id="cal2"><p>3</p></div>
+        <div id="cal3"><p>4</p></div>
+        <div id="cal4"><p>5</p></div>
+        <div id="cal5"><p>6</p></div>
+        <div id="gok"><p>7</p></div>
+        <div id="sary"><p>8</p></div>
+        <div id="gara"><p>9</p></div>
+        <div id="cep"><p>10</p></div>
+        <div id="cep1"><p>11</p></div>
+        <div  class="gyzyl"><p>12</p></div>
+        <div id="gara"><p>13</p></div>
+        <div id="cal1"><p>14</p></div>
+        <div id="PUR"><p>15</p></div>
+        
+    </div>
+    <style>
+       
+        .container{
+            gap:10px;
+            background-color: rgb(193, 197, 159);
+            height: 600px;
+            width: 600px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+            grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+        }
+        #cal1,#cal5{
+            background-color: rgb(55, 37, 61);
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        #cal2,#cal4{background-color: green;
+        grid-row: span 3;
+        grid-column:span 1;}
+        #cal3{background-color: orchid;
+        grid-row: span 3;
+        grid-column: span 2;}
+        #gok{background-color: blue;
+            grid-row: span 4;
+            grid-column: span 3;
+
+        }
+        #sary{background-color: yellow;
+            grid-column: span 3 ;
+            display: block;
+        }
+        #gara{background-color: rgb(64, 14, 14);
+            grid-row: span 2;
+        }
+        .gyzyl{background-color: red;
+            grid-column: span 2;
+        }
+        p{
+            color: rgb(4, 13, 34);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+            text-shadow: 0.5px 0.8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+        #PUR{background-color: rgb(10, 28, 98);
+        grid-column: span 1;
+        grid-row: span 2;
+    grid-row-end: auto;}
+        #cep,#cep1{background-color: aqua;
+        grid-column: span 5;
+    grid-row: span 3;}
+        
+        
+    </style>
+    
+</body>
+</html>
