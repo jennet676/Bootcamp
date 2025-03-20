@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+    <link rel="stylesheet" href="style.css">
+      
+</head>
+<body>  
+    <div class="container">
+        <h1>Refresh Me</h1>
+        <div class="dice">
+            <p>Player 1 </p>
+            <img class="img1"src="images/dice3.png">
+        </div>
+        <div class="dice">
+        <p>Player 2 </p>
+        <img class="img2"src="images/dice5.png">
+        </div>
+    </div>
+    
+
+<script>
+var number1=Math.floor(Math.random()*6)+1;
+var randomDiceImg="dice"+ number1 +".png";
+
+var randomImageSource="images/"+randomDiceImg;
+var image1=document.querySelectorAll("img")[0]
+image1.setAttribute("src",randomImageSource);
+
+var number2=Math.floor(Math.random()*6)+1;
+
+var randomImageSource2="images/dice"+number2+".png";
+document.querySelectorAll("img")[1].setAttribute("src",randomImageSource2);
+
+if(number1===number2){
+    document.querySelector("h1").innerHTML="It's Draw!";}
+else if(number1>number2){
+    document.querySelector("h1").innerHTML="🚩Player 1 wins!";}
+else if(number1<number2){
+    document.querySelector("h1").innerHTML="🏳️Player 2 wins!";}
+</script>
+</body>
+<footer>Made by Jennet Orazmyradova</footer>
+</html>
