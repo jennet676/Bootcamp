@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body{gap: 0px;}
+        .choices button {
+            font-size: 20px;
+            padding: 4px;
+            margin: 5px;
+        }
+        .choices img {
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+        }
+        .result-container {   
+            margin-top: 29px;
+            font-size: 29px;
+        }
+        .choice-display img {
+            border-radius: 5px;
+            border: 9px solid rgb(156, 155, 235);
+            width: 110px;
+            height: 110px;
+            margin: 10px;
+        }
+        .galyp {
+            display: flex;
+            align-items: center;
+            color: antiquewhite;
+            font-size: 1.5rem;
+            background-color: rgb(64, 3, 121);
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            width: 100%;
+            height: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; background-color: rgb(187, 76, 159);border-radius: 15px; text-align:center white;font-size: 50px; padding: 20px;">Rock Paper Scissors</h1>
+       
+    <div class="galyp">
+         <div class="result-container">
+        <p>You chose:</p>
+        <div class="choice-display" id="user-choice"></div>
+        <p>Computer chose:</p>
+        <div class="choice-display" id="computer-choice"></div>
+        <p id="result" style="font-size: 30px; font-weight: bold; margin-top: 10px;">Make your move!</p>
+    </div>
+    <div class="choices">
+        <button onclick="playGame('rock')"><img src="img/rock.png" alt="Rock"></button>
+        <button onclick="playGame('paper')"><img src="img/paper.png" alt="Paper"></button>
+        <button onclick="playGame('scissors')"><img src="img/scrissor.png" alt="Scissors"></button>
+    </div>
+    
+</div>
+
+    <script>
+        const choices = {
+            rock: "img/rock.png",
+            paper: "img/paper.png",
+            scissors: "img/scrissor.png"
+        };
+
+        function playGame(userChoice) {
+            const choicesArray = ['rock', 'paper', 'scissors'];
+            const computerChoice = choicesArray[Math.floor(Math.random() * 3)];
+
+            if (userChoice === computerChoice) {
+                result = "It's a draw!";
+            } else if (
+                (userChoice === 'rock' && computerChoice === 'scissors') ||
+                (userChoice === 'paper' && computerChoice === 'rock') ||
+                (userChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                result = 'You win! 🎉';
+            } else {
+                result = 'You lose! 😢';
+            }
+
+            document.getElementById('user-choice').innerHTML = `<img src="${choices[userChoice]}" alt="${userChoice}">`;
+            document.getElementById('computer-choice').innerHTML = `<img src="${choices[computerChoice]}" alt="${computerChoice}">`;
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
