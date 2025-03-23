@@ -1,0 +1,48 @@
+body {
+    display: grid;
+    height: 100vh;
+    background-color: #5f2905fe;
+}
+h1 {text-align: center;
+    margin: 30px;
+    font-family:'italic';
+    text-shadow: 10px 0 #232931;
+    font-size: 8rem;
+    color: #0beaa0;
+  }
+.piano {
+    display: flex;
+    justify-content: center;
+    
+}
+.key {
+    width: 90px;
+    height: 400px;
+    margin: 2px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.1s ease;
+}
+.white {
+    background-color: rgb(255, 255, 255);
+    color: rgb(41, 34, 34);
+    margin-left: 15px;
+}
+.black {
+    background-color: black;
+    color: rgb(219, 201, 201);
+    height: 200px;
+    margin-left: -25px;
+    margin-right: -25px;
+    z-index: 1;
+    position: relative;
+}
+.key:active {
+    background-color: gray;
+}
