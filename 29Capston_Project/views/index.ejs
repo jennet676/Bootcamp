@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= drink.strDrink %> - Cocktail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><%= drink.strDrink %></h1>
+        <img src="<%= drink.strDrinkThumb %>" alt="Cocktail Image" width="300">
+        <h2>Ingredients:</h2>
+        <ul>
+            <% for (let i = 1; i <= 15; i++) {
+                const ingredient = drink["strIngredient" + i];
+                const measure = drink["strMeasure" + i];
+                if (ingredient) { %>
+                    <li><%= measure || "" %> <%= ingredient %></li>
+            <%  } } %>
+        </ul>
+        <h2>Instructions:</h2>
+        <p><%= drink.strInstructions %></p>
+    </div>
+</body>
+</html>
