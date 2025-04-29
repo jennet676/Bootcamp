@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+  <meta charset="UTF-8">
+  <title>Kitaby Üýtget</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>✏️ Kitaby Üýtget</h1>
+  <form action="/books/edit/<%= book.id %>" method="POST">
+    <label>Kitap ady:</label>
+    <input type="text" name="title" value="<%= book.title %>" required><br>
+
+    <label>Awtory:</label>
+    <input type="text" name="author" value="<%= book.author %>" required><br>
+
+    <button type="submit">Ýatda sakla</button>
+  </form>
+  <a href="/">← Yza</a>
+</body>
+</html>

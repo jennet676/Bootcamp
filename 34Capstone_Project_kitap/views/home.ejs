@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+  <meta charset="UTF-8">
+  <title>Kitap Sanawy</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>📚 Meniň Kitap Sanawym</h1>
+  <a href="/books/new">➕ Täze kitap goş</a>
+
+  <% if (books.length === 0) { %>
+    <p>Kitap ýok. Täze kitap goşuň!</p>
+  <% } else { %>
+    <ul>
+      <% books.forEach(book => { %>
+        <li>
+          <strong><%= book.title %></strong> – <em><%= book.author %></em>
+          <form action="/books/delete/<%= book.id %>" method="POST" style="display:inline;">
+            <button type="submit">❌ Poz</button>
+          </form>
+          <a href="/books/edit/<%= book.id %>">✏️ Üýtget</a>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</body>
+</html>
